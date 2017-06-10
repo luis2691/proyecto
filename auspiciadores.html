@@ -1,18 +1,22 @@
+
+<!DOCTYPE html>
+
 <?php
 include("misfunciones.php");
 $conexion=Conectarse(); 
-     
-$sql = "select auspiciador.Codigo, auspiciador.Descripcion,  premio.CodigoPremio, premio.Descripcion, premio.Puntos from auspiciador,premio WHERE auspiciador.CodigoPremio=premio.CodigoPremio"; 
+    
+$sql = "select a.Codigo, a.Descripcion,  p.CodigoPremio, p.Descripcion, p.Puntos from auspiciador a , premio p WHERE a.CodigoPremio=p.CodigoPremio"; 
 $resultado=mysql_query($sql ,$conexion);
 ?>
+
 <html>
 <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type= "text/css" href="css/estiloIndex.css" />
+        <h2 style= "text-align:center; color:white;font-family:fantasy" >Nuestros colabores y sus respectivos premios:</h2>
 
     </head>
     <body>
-         <h2 style= "text-align:center; color:white;font-family:fantasy" >Nuestros colabores y sus respectivos premios:</h2>
+         
     <center>
         <br>
         <br>
@@ -30,7 +34,7 @@ $resultado=mysql_query($sql ,$conexion);
 
         <?php
         $n=0;
-        while($row=mysql_fetch_row($resultado)){
+        while($row=mysql_fetch_array($resultado)){
                     echo "<tr><td>" . $row[0] . "</td>" ;
 	                echo "<td>" . $row[1] . "</td>";
                     echo "<td>" . $row[2] . "</td>";
@@ -40,7 +44,7 @@ $resultado=mysql_query($sql ,$conexion);
                 }
                 mysql_free_result($resultado); 
                 mysql_close($conexion);
-            ?>    
+         ?>    
         </table>
         </center>>
     <a href="index.html" class="volver">Inicio <a/>
