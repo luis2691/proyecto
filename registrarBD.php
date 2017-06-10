@@ -3,7 +3,8 @@
 include("misfunciones.php");
 $conexion=Conectarse();
 $codigo =  $_POST['corr'];
-$sql = "select * from usuario where Correo = '" . $codigo . "'";
+$codigo2 = $_POST['ru'];
+$sql = "select * from usuario where Correo = '" . $codigo . "' OR Rut = '".$codigo2."'";
 $resultado=mysql_query( $sql ,$conexion);
 ?>
 
@@ -31,7 +32,7 @@ $resultado=mysql_query( $sql ,$conexion);
 		mysql_close($conexion);
      } else if( $numResults == 0)		 {
 
-	  $agregar = mysql_query("insert into usuario (`Nombre`, `Rut`, `Sexo`, `Correo`, `Password`) values ('" .$_POST['nom']. "','" .$_POST['ru']."','" .$_POST['sex']."','" .$_POST['corr']."','" .$_POST['pass']. "')", $conexion); 
+	  $agregar = mysql_query("insert into usuario (`Nombre`, `Rut`, `Sexo`, `Correo`, `Password`) values ('" .$_POST['nom']. "','" .$_POST['ru']."','" .$_POST['sex']."','" .$_POST['corr']."','" .$_POST['pass']. "')", $conexion);
 
 	 echo "Usuario agregado con éxito";}
 ?>
