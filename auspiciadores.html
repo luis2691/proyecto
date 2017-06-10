@@ -1,0 +1,48 @@
+<?php
+include("misfunciones.php");
+$conexion=Conectarse(); 
+     
+$sql = "select auspiciador.Codigo, auspiciador.Descripcion,  premio.CodigoPremio, premio.Descripcion, premio.Puntos from auspiciador,premio WHERE auspiciador.CodigoPremio=premio.CodigoPremio"; 
+$resultado=mysql_query($sql ,$conexion);
+?>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type= "text/css" href="css/estiloIndex.css" />
+
+    </head>
+    <body>
+         <h2 style= "text-align:center; color:white;font-family:fantasy" >Nuestros colabores y sus respectivos premios:</h2>
+    <center>
+        <br>
+        <br>
+        <table border="1">
+        <tr>
+        <td>Codigo Auspiciador</td>
+        <td>Nombre de Auspiciador</td>
+        <td>Codigo Premio </td>
+        <td>Descripcion de Premio </td>
+        <td>Puntos</td>
+        
+        </tr>
+
+        
+
+        <?php
+        $n=0;
+        while($row=mysql_fetch_row($resultado)){
+                    echo "<tr><td>" . $row[0] . "</td>" ;
+	                echo "<td>" . $row[1] . "</td>";
+                    echo "<td>" . $row[2] . "</td>";
+                    echo "<td>" . $row[3] . "</td>";
+                    echo "<td>" . $row[4] . "</td></tr>";    	                 
+
+                }
+                mysql_free_result($resultado); 
+                mysql_close($conexion);
+            ?>    
+        </table>
+        </center>>
+    <a href="index.html" class="volver">Inicio <a/>
+    </body>
+    </html>
