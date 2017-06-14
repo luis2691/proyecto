@@ -44,7 +44,8 @@
 							<li><a href="right-sidebar.html">Right Sidebar</a></li>
 							<li><a href="two-sidebar.html">Two Sidebar</a></li>
 							<li><a href="nosotros.html">Nosotros</a></li>
-							<li class="current"><a href="registro_usuario.html">Ingresa</a></li>
+							<li><a href="registro_usuario.html">Ingresa</a></li>
+							<li class="current"><a href="ingresoadmin.html">Ingresa Administrador</a></li>
 						</ul>
 					</nav>
 
@@ -52,33 +53,14 @@
 <!-- aqui registro e ingreso de usuario -->
 		<center>
 			<h2>Ingresa a tu cuenta</h2>
-				<form action="inicioUser.php" method="post">
-					Email: <input type="text" name="corr" placeholder="ejemplo@mail.com" maxlength="25" size="10"><br>
+				<form action="inicioAdmin.php" method="post">
+					Email: <input type="text" name="nam" placeholder="Administrator!!!" maxlength="25" size="10"><br>
 					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
 					<input type="submit">
 				</form>
 				<br><br>
 
-		<h2>Crear cuenta nueva</h2>
 
-				<form action="registrarBD.php" method="post" >
-
-					Nombre: <input type="text" name="nom" placeholder="Juanito Pérez" maxlength="25" size="25"><br>
-
-					Rut: <input type="text" name="ru" placeholder="12345678-9" maxlength="10" size="10"><br>
-
-					E-mail: <input type="text" name="corr" placeholder="ejemplo@mail.com"><br>
-
-					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
-
-					Repetir Contraseña: <input type="password" name="pass2" placeholder="Repite tu contraseña"><br>
-
-					Sexo: <input type="radio" name="sex" value="masculino"> Masculino
-					      <input type="radio" name="sex" value="femenino"> Femenino
-					      <input type="radio" name="sex" value="otro"> Otro<br>
-								<br>
-					<input type="submit">
-				</form>
 			</center>
 			<!-- Main -->
 				<section class="wrapper style1">
