@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <?php
 session_start();
  ?>
@@ -8,7 +8,7 @@ include("misfunciones.php");
 $conexion=Conectarse();
 $codigo =  $_POST['nam'];
 $codigo2 =  $_POST['pass'];
-$sql = "select * from administrador where AdminName = '" . $codigo . "' && Password = '" . $codigo2 . "'";
+$sql = "select * from administrador where Administrador = '" . $codigo . "' AND Password = '" . $codigo2 . "'";
 $resultado=mysql_query( $sql ,$conexion);
 */?>
 
@@ -61,7 +61,7 @@ $conexion=Conectarse();
 $username = $_POST['nam'];
 $password = $_POST['pass'];
 
-$sql = "SELECT * FROM administrador WHERE AdminName = '".$username."'";
+$sql = "SELECT * FROM administrador WHERE Administrador = '".$username."'";
 
 $resultado=mysql_query( $sql ,$conexion);
 
