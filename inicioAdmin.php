@@ -72,8 +72,8 @@ if(isset($_SESSION['AdminName'])) {?>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-								<a href="#">	<i class="icon major fa-pencil"></i></a>
-									<h3><a href="#">Usuarios</a></h3>
+								<a href="agregarpuntos.php">	<i class="icon major fa-pencil"></i></a>
+									<h3><a href="agregarpuntos.php">Usuarios</a></h3>
 									<p>Asigna puntos a usuarios aquí.</p>
 								</div>
 							</section>
@@ -214,7 +214,7 @@ if(isset($_SESSION['AdminName'])) {?>
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+
 							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 						</ul>
