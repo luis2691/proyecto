@@ -1,8 +1,15 @@
 ﻿<!DOCTYPE HTML>
+<?php
+	session_start();
+	include 'conex.php';
+	if(isset($_SESSION['AdminName'])){
+	echo '<script> window.location="inicioadmin.php"; </script>';
+	}
+?>
 
 <html>
 <head>
-	<title>Registrate en ConectiVerde</title>
+	<title>Ingreso Administrador</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -53,10 +60,10 @@
 <!-- aqui registro e ingreso de usuario -->
 		<center>
 			<h2>Ingresa a tu cuenta</h2>
-				<form action="inicioAdmin.php" method="POST">
-					Email: <input type="text" name="nam" placeholder="Administrator!!!" maxlength="25" size="10"><br>
-					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
-					<input type="submit">
+				<form action="inicioAdmin1.php" method="POST">
+					Email: <input type="text" name="AdminName" placeholder="Administrator!!!" maxlength="25" size="10"><br>
+					Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>
+					<input type="submit" name="login" value="Entrar">
 				</form>
 				<br><br>
 
@@ -87,7 +94,7 @@
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							
 							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 						</ul>

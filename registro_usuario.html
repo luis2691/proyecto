@@ -55,7 +55,7 @@
 				<form action="inicioUser.php" method="post">
 					Email: <input type="text" name="corr" placeholder="ejemplo@mail.com" maxlength="25" size="10"><br>
 					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
-					<input type="submit">
+					<input type="submit" value="Aceptar">
 				</form>
 				<br><br>
 
@@ -63,21 +63,22 @@
 
 				<form action="registrarBD.php" method="post" >
 
-					Nombre: <input type="text" name="nom" placeholder="Juanito Pérez" maxlength="25" size="25"><br>
+					Nombre: <input type="text" name="nom" placeholder="Juanito Pérez" maxlength="25" size="25" required><br>
 
-					Rut: <input type="text" name="ru" placeholder="12345678-9" maxlength="10" size="10"><br>
+					Rut: <input type="text" name="ru" placeholder="12345678-9" maxlength="10" size="10"required><br>
 
-					E-mail: <input type="text" name="corr" placeholder="ejemplo@mail.com"><br>
+					E-mail: <input type="text" name="corr" placeholder="ejemplo@mail.com"required><br>
 
-					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
+					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"required><br>
 
-					Repetir Contraseña: <input type="password" name="pass2" placeholder="Repite tu contraseña"><br>
+					Repetir Contraseña: <input type="password" name="pass2" placeholder="Repite tu contraseña"required><br>
 
 					Sexo: <input type="radio" name="sex" value="masculino"> Masculino
 					      <input type="radio" name="sex" value="femenino"> Femenino
 					      <input type="radio" name="sex" value="otro"> Otro<br>
+						<!--		<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>-->
 								<br>
-					<input type="submit">
+					<input type="submit" value="Aceptar">
 				</form>
 			</center>
 			<!-- Main -->
