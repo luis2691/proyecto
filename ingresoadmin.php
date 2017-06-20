@@ -60,8 +60,8 @@
 <!-- aqui registro e ingreso de usuario -->
 		<center>
 			<h2>Ingresa a tu cuenta</h2>
-				<form action="inicioAdmin1.php" method="POST">
-					Email: <input type="text" name="AdminName" placeholder="Administrator!!!" maxlength="25" size="10"><br>
+				<form action="validaradmin.php" method="POST">
+					Email: <input type="text" name="AdminName" placeholder="Nombre de administrador" maxlength="25" size="10"><br>
 					Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>
 					<input type="submit" name="login" value="Entrar">
 				</form>
@@ -94,7 +94,7 @@
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							
+
 							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 						</ul>

@@ -1,5 +1,11 @@
 ﻿<!DOCTYPE HTML>
-
+<?php
+	session_start();
+	include 'conex.php';
+	if(isset($_SESSION['Correo'])){
+	echo '<script> window.location="inicioUser.php"; </script>';
+	}
+?>
 <html>
 <head>
 	<title>Registrate en ConectiVerde</title>
@@ -52,10 +58,10 @@
 <!-- aqui registro e ingreso de usuario -->
 		<center>
 			<h2>Ingresa a tu cuenta</h2>
-				<form action="inicioUser.php" method="post">
-					Email: <input type="text" name="corr" placeholder="ejemplo@mail.com" maxlength="25" size="10"><br>
-					Contraseña: <input type="password" name="pass" placeholder="Ingresa tu contraseña"><br>
-					<input type="submit" value="Aceptar">
+				<form action="validaruser.php" method="post">
+					Email: <input type="text" name="Correo" placeholder="ejemplo@mail.com" maxlength="25" size="10" required><br>
+					Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña" required><br>
+					<input type="submit" name="login" value="Entrar">
 				</form>
 				<br><br>
 

@@ -52,22 +52,12 @@ if(isset($_SESSION['AdminName'])) {?>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
 								<li><a href="registraradmin.html">Agregar Admin</a></li>
-						<li><a href="adminlogout.php">Cerrar Sesión</a></li>
+						<li><a href="logout.php">Cerrar Sesión</a></li>
 							</ul>
 						</nav>
 
 				</div>
 
-
-
-
-			<!-- Banner
-				<section id="banner">
-					<header>
-						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
-						<a href="#" class="button">Learn More</a>
-					</header>
-				</section> -->
 
 			<!-- Highlights -->
 				<section class="wrapper style1">
