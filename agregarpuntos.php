@@ -65,8 +65,7 @@ if(isset($_SESSION['AdminName'])) {?>
 						Reciclado Plastico: <input type="number" name="plastico" placeholder="Peso plastico en gramos"><br>
 						Reciclado Papel: <input type="number" name="papel" placeholder="Peso papel en gramos"><br>
 						Reciclado Aluminio: <input type="number" name="aluminio" placeholder="Aluminio en gramos"><br>
-				
-						Ingresar puntos: <input type="number" name="Puntos" placeholder="puntos"><br>
+										
                 <br>
       			<!--		Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>-->
       					<input type="submit" name="guardar" value="Aceptar">

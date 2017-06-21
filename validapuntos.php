@@ -18,11 +18,12 @@ if(isset($_SESSION['AdminName']))
 				$plastico = $_POST['plastico'];
 				$papel = $_POST['papel'];
 				$aluminio = $_POST['aluminio'];
-				$puntos = $_POST['Puntos'];				
+				$puntos = $plastico+$papel+$aluminio   ;				
 				
-				$addplastico = mysql_query("UPDATE usuario SET `Plastico` = `Plastico` + '".$puntos."' WHERE Rut = '".$rut."'");
-				$addpapel = mysql_query("UPDATE usuario SET `Papel` = `Plastico` + '".$plastico."' WHERE Rut = '".$rut."'");
-				$addaluminio = mysql_query("UPDATE usuario SET `Aluminio` = `Plastico` + '".$papel."' WHERE Rut = '".$rut."'");
+				$addplastico = mysql_query("UPDATE usuario SET `Plastico` = `Plastico` + '".$plastico."' WHERE Rut = '".$rut."'");
+				$addpapel = mysql_query("UPDATE usuario SET `Papel` = `Papel` + '".$papel."' WHERE Rut = '".$rut."'");
+				$addaluminio = mysql_query("UPDATE usuario SET `Aluminio` = `Aluminio` + '".$aluminio."' WHERE Rut = '".$rut."'");
+				
 				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = `Puntos` + '".$puntos."' WHERE Rut = '".$rut."'");
 				echo "Puntos agregados con éxito";
 				echo'<script> window.location="agregarpuntos.php"; </script>';
