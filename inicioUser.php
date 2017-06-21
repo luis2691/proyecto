@@ -109,12 +109,12 @@ if(isset($_SESSION['Correo'])) {
 				echo "
 
 				    <tr>
-							<td width='25' align='center'><input type=radio name='cod' value=".$registro['CodigoPremio']." required/></td>
+							<td width='25' align='center'><input type=radio name=codigo value =".$registro['CodigoPremio']." required/></td>
 							<td  width='150' align='center'>".$registro['Descripcion']."</td>
 				      <td width='25' align='center'>".$registro['Puntos']."</td>
 
 						</tr>
-
+				
 				";
 				}
 
@@ -126,6 +126,7 @@ if(isset($_SESSION['Correo'])) {
 				echo"
 				<thead><th width='150' colspan='7' rowspan='7' align='center'>El Total de Premios es de: $numero</th></thead>
 				";
+				
 				?>
 				</tbody>
 				   </table>
