@@ -71,7 +71,7 @@ if(isset($_SESSION['Correo'])) {
 				</section> -->
 
 			<!-- Highlights -->
-				<section class="wrapper style1">
+	<!--			<section class="wrapper style1">
 					<div class="container">
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
@@ -97,9 +97,23 @@ if(isset($_SESSION['Correo'])) {
 							</section>
 						</div>
 					</div>
-				</section>
+				</section>-->
+
+				<h2><?php
+				include 'conex.php';
+				$correo=$_SESSION['Correo'];
+				$usuario =mysql_query("SELECT puntos FROM usuario where Correo='$correo'");
+				if ($usuario) {
+					$data=mysql_fetch_assoc($usuario);
+					echo '<br>	Tus puntos acumulados son:  '  .$data['puntos']. '<p>';
+
+					}
 
 
+
+				?></h2>
+				<center>
+				<form action='canjear.php' method='post'>
 				<div class="datagrid"><table align="center" border="20px" cellpadding="2" cellspacing="2">
 				<thead><th width='10' colspan="1" rowspan="1" align="center">Selección</th><th width='50%' colspan="1" rowspan="1" align="center">Descripción</th><th width='10' colspan="1" rowspan="1" align="center">Puntos</th></thead>
 				<center>
@@ -109,28 +123,30 @@ if(isset($_SESSION['Correo'])) {
 
 
 				    while ($registro = mysql_fetch_array($mostrar)){
-				echo "<html>
+				echo "
+
 				    <tr>
-							<td width='25' align='center'><input type=radio name='cod' value=".$registro['CodigoPremio']."/></td>
+							<td width='25' align='center'><input type=radio name='cod' value=".$registro['CodigoPremio']." required/></td>
 							<td  width='150' align='center'>".$registro['Descripcion']."</td>
 				      <td width='25' align='center'>".$registro['Puntos']."</td>
 
-				</tr></html>
+						</tr>
+
 				";
 				}
-				
+
 				?>
 			</center>
 				<?php
 				$numero = mysql_num_rows($mostrar);
 
 				echo"
-				<thead><th width='150' colspan='7' rowspan='7' align='center'>El Total de Registros es de: $numero</th></thead>
+				<thead><th width='150' colspan='7' rowspan='7' align='center'>El Total de Premios es de: $numero</th></thead>
 				";
 				?>
 				</tbody>
 				   </table>
-				</div>
+				</div><input type='submit' value='Canjear'> <br></form></center>
 
 			<!-- Gigantic Heading
 				<section class="wrapper style2">
