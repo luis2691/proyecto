@@ -15,11 +15,11 @@ if(isset($_SESSION['AdminName'])) {
 	<body>
 			<?php
 				include 'conex.php';
-				$nombre = $_POST['Nombre'];
+				$rut = $_POST['rut'];
 				$puntos = $_POST['Puntos'];
 			
-				$addpuntos = mysql_query("UPDATE usuario `Puntos` = `Puntos` + '".$puntos."' where Nombre = '".$nombre."'");
- 			
+				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = (`Puntos` + '".$puntos."') where Rut = '".$rut."'");
+				echo "Puntos agregados con éxito";
 			
 				/*if (mysql_num_rows($log)>0) {
 				$row = mysql_fetch_array($log);

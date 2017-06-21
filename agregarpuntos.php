@@ -58,19 +58,9 @@ if(isset($_SESSION['AdminName'])) {?>
           <center>
       			<h2>Asignar Puntos</h2>
       				<form action="validapuntos.php" method="POST">
-                Usuario:
-                <select>
-                <option value="0">Seleccionar usuario</option>
-                <?php
-                include 'conex.php';
-                $query= "SELECT Nombre FROM usuario";
-                $resultado=mysql_query($query);
-                while ($usuario = mysql_fetch_array($resultado)) {
-                  echo '<option value="'.$usuario[Nombre].'">'.$usuario[Nombre].'</option>';
-                }
-                ?>
-
-               </select><br>
+                
+						Usuario:<input type="text" name="rut" placeholder="Rut"><br>
+                
       					Ingresar puntos: <input type="number" name="Puntos" placeholder="puntos"><br>
                 <br>
       			<!--		Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>-->
