@@ -28,7 +28,9 @@ $resultado=mysql_query( $sql ,$conexion);
 
    $numResults = mysql_num_rows($resultado);
      if ($numResults != 0) {
-   		echo " El Usuario que desea ingresar ya existe ";
+   		//echo " El Usuario que desea ingresar ya existe ";
+			echo '<script> alert("El Usuario que desea ingresar ya existe");</script>';
+	 	 echo '<script> window.location="registro_usuario.php"; </script>';
 		mysql_close($conexion);
      } else if( $numResults == 0)		 {
 		$contra=$_POST['pass'];
@@ -36,9 +38,13 @@ $resultado=mysql_query( $sql ,$conexion);
      if($contra==$contra2){
 	  $agregar = mysql_query("insert into usuario (`Nombre`, `Rut`, `Sexo`, `Correo`, `Password`) values ('" .$_POST['nom']. "','" .$_POST['ru']."','" .$_POST['sex']."','" .$_POST['corr']."','" .$_POST['pass']. "')", $conexion);
 
-	 echo "Usuario agregado con éxito";}
+	 //echo "Usuario agregado con éxito";}
+	 echo '<script> alert("Usuario agregado con éxito.");</script>';
+	 echo '<script> window.location="registro_usuario.php"; </script>';}
 	 else{
-		echo"Contraseña NO coinciden"; 
+		//echo"Contraseña NO coinciden";
+		echo '<script> alert("Constraseñas no coinciden.");</script>';
+		echo '<script> window.location="registro_usuario.php"; </script>';
 	 }
 	 }
 ?>

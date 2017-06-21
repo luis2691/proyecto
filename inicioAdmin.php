@@ -65,8 +65,8 @@ if(isset($_SESSION['AdminName'])) {?>
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-								<a href="auspiciadores.php">	<i  class="icon major fa-paper-plane"></i></a>
-									<h3><a href="auspiciadores.php">Auspiciadores</a></h3>
+								<a href="agregarauspiciador.php">	<i  class="icon major fa-paper-plane"></i></a>
+									<h3><a href="agregarauspiciador.php">Auspiciadores</a></h3>
 									<p>Agrega auspiciadores aquí.</p>
 								</div>
 							</section>

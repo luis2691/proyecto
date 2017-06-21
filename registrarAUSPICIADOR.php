@@ -2,7 +2,7 @@
 session_start();
 include 'conex.php';
 
-if(isset($_SESSION['AdminName'])) 
+if(isset($_SESSION['AdminName']))
 ?>
 
 
@@ -33,23 +33,24 @@ $resultado=mysql_query( $sql);
 
 <?php
 	include 'conex.php';
-	
+
 	$numResults = mysql_num_rows($resultado);
-	
+
      if ($numResults != 0){
-		 echo "El auspiciador que intenta ingresar ya se encuentra en la Base de Datos";
-		 		 
+		// echo "El auspiciador que intenta ingresar ya se encuentra en la Base de Datos";
+		 echo '<script> alert("El auspiciador que intenta ingresar ya se encuentra en la Base de Datos.");</script>';
 		 }else if( $numResults == 0){
-	
+
 	$addauspiciador = mysql_query("INSERT INTO auspiciador (`Codigo`,`Descripcion`, `Direccion`, `CodigoPremio`) VALUES ( '" .$_POST['Codigo']. "','" .$_POST['DescripA']. "','" .$_POST['Direc']. "','" .$_POST['CodigoPremio']. "')");
 
 	$addpremio = mysql_query("INSERT INTO premio (`CodigoPremio`,`Descripcion`, `Stock`,`Puntos`) VALUES ( '" .$_POST['CodigoPremio']. "','" .$_POST['DescripP']. "','" .$_POST['Stock']. "','" .$_POST['Puntos']. "')");
-	echo "AGREGADO CON EXITO";                                                     
-	
+	echo "AGREGADO CON EXITO";
+	echo '<script> window.location="agregarauspiciador.php"; </script>';
+
 	/*echo '<script> window.location="agregarauspiciador.php"; </script>';*/
 	 }
-	
-	 
+
+
 	/*if (mysql_num_rows($log)>0) {
 	$row = mysql_fetch_array($log);
 	$_SESSION["AdminName"] = $row['AdminName'];
