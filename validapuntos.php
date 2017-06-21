@@ -18,7 +18,7 @@ if(isset($_SESSION['AdminName']))
 				$plastico = $_POST['plastico'];
 				$papel = $_POST['papel'];
 				$aluminio = $_POST['aluminio'];
-				$puntos = $plastico+$papel+$aluminio   ;				
+				$puntos = $plastico*4+$papel*3+$aluminio*8   ;				
 				
 				$addplastico = mysql_query("UPDATE usuario SET `Plastico` = `Plastico` + '".$plastico."' WHERE Rut = '".$rut."'");
 				$addpapel = mysql_query("UPDATE usuario SET `Papel` = `Papel` + '".$papel."' WHERE Rut = '".$rut."'");
