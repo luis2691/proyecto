@@ -9,7 +9,7 @@ if(isset($_SESSION['AdminName']))
 <?php
 include 'conex.php';
 
-$codigo =  $_POST['CodigoPremios'];
+$codigo =  $_POST['CodigoPremio'];
 
 $sql = "select * from premio where CodigoPremio = '" . $codigo . "' ";
 $resultado=mysql_query( $sql);
