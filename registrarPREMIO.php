@@ -1,11 +1,20 @@
-﻿<!DOCTYPE html>
 <?php
-include("misfunciones.php");
-$conexion=Conectarse();
-$codigo =  $_POST['corr'];
-$codigo2 = $_POST['ru'];
-$sql = "select * from usuario where Correo = '" . $codigo . "' OR Rut = '".$codigo2."'";
-$resultado=mysql_query( $sql ,$conexion);
+session_start();
+include 'conex.php';
+
+if(isset($_SESSION['AdminName'])) {
+?>
+
+
+<?php
+include 'conex.php';
+
+$codigo =  $_POST['CodigoPremios'];
+$descripcion = $_POST['Descripcion'];
+$puntos = $_POST['Puntos']
+
+$sql = "select * from premio where CodigoPremio = '" . $codigo . "' ";
+$resultado=mysql_query( $sql);
 ?>
 
 <html>
@@ -38,7 +47,7 @@ $resultado=mysql_query( $sql ,$conexion);
 
 	 echo "Usuario agregado con éxito";}
 	 else{
-		echo"Contraseña NO coinciden"; 
+		echo"Contraseña NO coinciden";
 	 }
 	 }
 ?>
