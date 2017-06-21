@@ -65,8 +65,8 @@ if(isset($_SESSION['AdminName'])) {?>
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-								<a href="#">	<i  class="icon major fa-paper-plane"></i></a>
-									<h3><a href="#">Auspiciadores</a></h3>
+								<a href="auspiciadores.php">	<i  class="icon major fa-paper-plane"></i></a>
+									<h3><a href="auspiciadores.php">Auspiciadores</a></h3>
 									<p>Agrega auspiciadores aquí.</p>
 								</div>
 							</section>
@@ -80,8 +80,8 @@ if(isset($_SESSION['AdminName'])) {?>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
 								<a href="agregarpremio.php">	<i class="icon major fa-wrench"></i></a>
-									<h3><a href="agregarpremio.php">Productos</a></h3>
-									<p>Aquí puedes agregar los productos de cada auspiciador</p>
+									<h3><a href="agregarpremio.php">Premios</a></h3>
+									<p>Aquí puedes agregar los premios de cada auspiciador</p>
 								</div>
 							</section>
 						</div>
