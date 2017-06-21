@@ -29,6 +29,7 @@ if(isset($_SESSION['AdminName'])) {?>
 						<nav id="nav">
 							<ul>
 								<li><a href="inicioAdmin.php">Inicio</a></li>
+								<li class="current"><a href="info.php">Información</a></li>
 								<li>
 									<a href="#">Administrar</a>
 									<ul>

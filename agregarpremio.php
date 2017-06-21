@@ -24,35 +24,22 @@ if(isset($_SESSION['AdminName'])) {?>
 							<h1><a href="index.html" id="logo">Conecti<em>Verde</em></a></h1>
 
 						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="inicioadmin.php">Inicio</a></li>
-									<li>
-										<a href="#">Administrar</a>
-										<ul>
-											<li><a href="#">Auspiciadores</a></li>
-											<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
-											<li><a href="agregarpremio.php">Premios</a></li>
-	<!--										<li>
-												<a href="#">Submenu</a>
-												<ul>
-													<li><a href="#">Lorem dolor</a></li>
-													<li><a href="#">Phasellus magna</a></li>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam nisl</a></li>
-													<li><a href="#">Veroeros feugiat</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>		-->
-											</ul>
-	<!--								</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
+						<nav id="nav">
+							<ul>
+								<li><a href="inicioAdmin.php">Inicio</a></li>
+								<li><a href="info.php">Información</a></li>
+								<li  class="current">
+									<a href="#">Administrar</a>
+									<ul>
+										<li><a href="agregarauspiciador.php">Auspiciadores</a></li>
+										<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
+										<li><a href="agregarpremio.php">Premios</a></li>
 
-							<li><a href="logout.php">Cerrar Sesión</a></li>
-								</ul>
-							</nav>
+										</ul>
+
+						<li><a href="logout.php">Cerrar Sesión</a></li>
+							</ul>
+						</nav>
 
 					</div>
 
@@ -63,12 +50,12 @@ if(isset($_SESSION['AdminName'])) {?>
 				<form action="registrarPREMIO.php" method="post" >
 
 					Código de Premio: <input type="text" name="CodigoPremios" placeholder="#####" maxlength="25" size="25" required><br>
-					
+
 					Descripcion: <input type="text" name="Descrip" placeholder="Describa aqui el premio" maxlength="25" size="25" required><br>
 
 					Puntos: <input type="number" name="Puntos" placeholder="0000" maxlength="10" size="10"required><br>
 
-										
+
 					<input type="submit" value="Agregar"> <br>
 
 
@@ -133,7 +120,7 @@ if(isset($_SESSION['AdminName'])) {?>
 </html>
 
 <?php
-  
+
   }else{
   echo '<script> window.location="ingresoadmin.php"; </script>';
   }

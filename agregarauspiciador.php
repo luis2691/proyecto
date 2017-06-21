@@ -24,35 +24,22 @@ if(isset($_SESSION['AdminName'])) ?>
 							<h1><a href="index.html" id="logo">Conecti<em>Verde</em></a></h1>
 
 						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="inicioadmin.php">Inicio</a></li>
-									<li>
-										<a href="#">Administrar</a>
-										<ul>
-											<li><a href="agregarauspiciadores.php">Auspiciadores</a></li>
-											<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
-											<li><a href="agregarpremio.php">Premios</a></li>
-	<!--										<li>
-												<a href="#">Submenu</a>
-												<ul>
-													<li><a href="#">Lorem dolor</a></li>
-													<li><a href="#">Phasellus magna</a></li>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam nisl</a></li>
-													<li><a href="#">Veroeros feugiat</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>		-->
-											</ul>
-	<!--								</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
+						<nav id="nav">
+							<ul>
+								<li><a href="inicioAdmin.php">Inicio</a></li>
+								<li><a href="info.php">Información</a></li>
+								<li class="current">
+									<a href="#">Administrar</a>
+									<ul>
+										<li><a href="agregarauspiciador.php">Auspiciadores</a></li>
+										<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
+										<li><a href="agregarpremio.php">Premios</a></li>
 
-							<li><a href="logout.php">Cerrar Sesión</a></li>
-								</ul>
-							</nav>
+										</ul>
+
+						<li><a href="logout.php">Cerrar Sesión</a></li>
+							</ul>
+						</nav>
 
 					</div>
 
@@ -64,13 +51,13 @@ if(isset($_SESSION['AdminName'])) ?>
 
 					Código de Auspiciador: <input type="text" name="Codigo" placeholder="#####" maxlength="25" size="25" required><br>
 
-					Descripcion: <input type="text" name="DescripA" placeholder="Describa aqui el auspiciador" maxlength="25" size="25" required><br>
+					Descripcion: <input type="text" name="DescripA" placeholder="Describa aqui el auspiciador" maxlength="140" size="25" required><br>
 
-					Direccion: <input type="text" name="Direc" placeholder="Direccion fisica" maxlength="25" size="25" required><br>
+					Direccion: <input type="text" name="Direc" placeholder="Direccion fisica" maxlength="100" size="25" required><br>
 
 					Codigo Premio: <input type="number" name="CodigoPremio" placeholder="0000" maxlength="10" size="25"required><br>
 
-					Descripcion Premio: <input type="text" name="DescripP" placeholder="Describa aqui el premio" maxlength="25" size="25" required><br>
+					Descripcion Premio: <input type="text" name="DescripP" placeholder="Describa aqui el premio" maxlength="250" size="25" required><br>
 
 					Stock:: <input type="number" name="Stock" placeholder="Ingresa Stock" maxlength="10" size="25"required><br>
 
@@ -82,4 +69,3 @@ if(isset($_SESSION['AdminName'])) ?>
 				</form>
 			</center>
 </html>
-		

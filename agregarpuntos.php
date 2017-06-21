@@ -24,48 +24,35 @@ if(isset($_SESSION['AdminName'])) {?>
   						<h1><a href="index.html" id="logo">Conecti<em>Verde</em></a></h1>
 
   					<!-- Nav -->
-  						<nav id="nav">
-  							<ul>
-  								<li><a href="inicioadmin.php">Inicio</a></li>
-  								<li>
-  									<a href="#">Administrar</a>
-  									<ul>
-  										<li><a href="#">Auspiciadores</a></li>
-  										<li><a href="#">Usuarios</a></li>
-  										<li><a href="#">Productos</a></li>
-  <!--										<li>
-  											<a href="#">Submenu</a>
-  											<ul>
-  												<li><a href="#">Lorem dolor</a></li>
-  												<li><a href="#">Phasellus magna</a></li>
-  												<li><a href="#">Magna phasellus</a></li>
-  												<li><a href="#">Etiam nisl</a></li>
-  												<li><a href="#">Veroeros feugiat</a></li>
-  											</ul>
-  										</li>
-  										<li><a href="#">Veroeros feugiat</a></li>		-->
-  										</ul>
-  <!--								</li>
-  								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-  								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-  								<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
-  								<li><a href="registraradmin.html">Agregar Admin</a></li>
-  						<li><a href="logout.php">Cerrar Sesión</a></li>
-  							</ul>
-  						</nav>
+            <nav id="nav">
+              <ul>
+                <li><a href="inicioAdmin.php">Inicio</a></li>
+                <li><a href="info.php">Información</a></li>
+                <li  class="current">
+                  <a href="#">Administrar</a>
+                  <ul>
+                    <li><a href="agregarauspiciador.php">Auspiciadores</a></li>
+                    <li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
+                    <li><a href="agregarpremio.php">Premios</a></li>
+
+                    </ul>
+
+            <li><a href="logout.php">Cerrar Sesión</a></li>
+              </ul>
+            </nav>
 
   				</div>
           <center>
       			<h2>Asignar Puntos</h2>
-				
+
       				<form action="validapuntos.php" method="POST">
-                
+
 						Usuario:         <input type="text" name="Rut" placeholder="Rut"><br>
-                
+
 						Reciclado Plastico: <input type="number" name="plastico" placeholder="Peso plastico en gramos"><br>
 						Reciclado Papel: <input type="number" name="papel" placeholder="Peso papel en gramos"><br>
 						Reciclado Aluminio: <input type="number" name="aluminio" placeholder="Aluminio en gramos"><br>
-										
+
                 <br>
       			<!--		Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>-->
       					<input type="submit" name="guardar" value="Aceptar">
