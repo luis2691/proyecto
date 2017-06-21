@@ -64,13 +64,13 @@ if(isset($_SESSION['AdminName'])) ?>
 
 					Código de Auspiciador: <input type="text" name="Codigo" placeholder="#####" maxlength="25" size="25" required><br>
 
-					Descripcion: <input type="text" name="DescripA" placeholder="Describa aqui el auspiciador" maxlength="25" size="25" required><br>
+					Descripcion: <input type="text" name="DescripA" placeholder="Describa aqui el auspiciador" maxlength="140" size="25" required><br>
 
-					Direccion: <input type="text" name="Direc" placeholder="Direccion fisica" maxlength="25" size="25" required><br>
+					Direccion: <input type="text" name="Direc" placeholder="Direccion fisica" maxlength="100" size="25" required><br>
 
 					Codigo Premio: <input type="number" name="CodigoPremio" placeholder="0000" maxlength="10" size="25"required><br>
 
-					Descripcion Premio: <input type="text" name="DescripP" placeholder="Describa aqui el premio" maxlength="25" size="25" required><br>
+					Descripcion Premio: <input type="text" name="DescripP" placeholder="Describa aqui el premio" maxlength="250" size="25" required><br>
 
 					Stock:: <input type="number" name="Stock" placeholder="Ingresa Stock" maxlength="10" size="25"required><br>
 
@@ -82,4 +82,3 @@ if(isset($_SESSION['AdminName'])) ?>
 				</form>
 			</center>
 </html>
-		
