@@ -99,6 +99,39 @@ if(isset($_SESSION['Correo'])) {
 					</div>
 				</section>
 
+
+				<div class="datagrid"><table align="center" border="20px" cellpadding="2" cellspacing="2">
+				<thead><th  colspan="1" rowspan="1" align="center">Cedula<input type="radio" name="rdoId" value=".$registro['CodigoPremio']."/></th><th colspan="1" rowspan="1" align="center">Descripcion</th><th width='150' colspan="1" rowspan="1" align="center">Puntos</th></thead>
+				<center>
+				<?php
+				include 'conex.php';
+				    $mostrar =mysql_query("SELECT * FROM premio");     // Esta linea hace la consulta
+
+
+				    while ($registro = mysql_fetch_array($mostrar)){
+				echo "<html>
+				    <tr>
+							<td><input type=radio name="sex" value=".$registro['CodigoPremio']."/></td>
+							<td  width='150' align='center'>".$registro['Descripcion']."</td>
+				      <td width='25' align='center'>".$registro['Puntos']."</td>
+
+				</tr></html>
+				";
+				}
+				?>
+			</center>
+				<?php
+				$numero = mysql_num_rows($mostrar);
+
+				echo"<html><form>
+				<input type=radio>
+				<thead><input type=radio><th width='150' colspan='7' rowspan='7' align='center'>El Total de Registros es de: $numero</th></thead></form></html>
+				";
+				?>
+				</tbody>
+				   </table>
+				</div>
+
 			<!-- Gigantic Heading
 				<section class="wrapper style2">
 					<div class="container">
