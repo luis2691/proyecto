@@ -69,7 +69,7 @@
 
 				<form action="registrarBD.php" method="post" >
 
-					Nombre: <input type="text" name="nom" placeholder="Juanito Pérez" maxlength="25" size="25" required><br>
+					Nombre Completo: <input type="text" name="nom" placeholder="Juanito Pérez" maxlength="25" size="25" required><br>
 
 					Rut: <input type="text" name="ru" placeholder="12345678-9" maxlength="10" size="10"required><br>
 

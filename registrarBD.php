@@ -31,10 +31,16 @@ $resultado=mysql_query( $sql ,$conexion);
    		echo " El Usuario que desea ingresar ya existe ";
 		mysql_close($conexion);
      } else if( $numResults == 0)		 {
-
+		$contra=$_POST['pass'];
+		$contra2=$_POST['pass2'];
+     if($contra==$contra2){
 	  $agregar = mysql_query("insert into usuario (`Nombre`, `Rut`, `Sexo`, `Correo`, `Password`) values ('" .$_POST['nom']. "','" .$_POST['ru']."','" .$_POST['sex']."','" .$_POST['corr']."','" .$_POST['pass']. "')", $conexion);
 
 	 echo "Usuario agregado con éxito";}
+	 else{
+		echo"Contraseña NO coinciden"; 
+	 }
+	 }
 ?>
 
 		<a href="index.html" class="volver">Inicio <a/>
