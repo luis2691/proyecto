@@ -99,7 +99,7 @@ if(isset($_SESSION['Correo'])) {
 					</div>
 				</section>-->
 
-				<?php
+				<h2><?php
 				include 'conex.php';
 				$correo=$_SESSION['Correo'];
 				$usuario =mysql_query("SELECT puntos FROM usuario where Correo='$correo'");
@@ -111,7 +111,7 @@ if(isset($_SESSION['Correo'])) {
 
 
 
-				?>
+				?></h2>
 				<center>
 				<form action='canjear.php' method='post'>
 				<div class="datagrid"><table align="center" border="20px" cellpadding="2" cellspacing="2">
