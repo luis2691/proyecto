@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <?php
 include("misfunciones.php");
 $conexion=Conectarse();     
-$sql = "select * from usuario"; 
+$sql = "SELECT * FROM auspiciador"; 
 $resultado=mysql_query($sql ,$conexion);
 ?>
 
@@ -15,7 +14,7 @@ $resultado=mysql_query($sql ,$conexion);
     </head>
     <body>
          
-		 <?php
+<?php
 
    $numResults = mysql_num_rows($resultado);
      if ($numResults == 0) {
@@ -35,7 +34,7 @@ $resultado=mysql_query($sql ,$conexion);
                 
         <table border="1">
         <tr>
-       	        <td>Codigo Auspiciador</td>
+       	     <td>Codigo Auspiciador</td>
         	<td>Nombre de Auspiciador</td>
         	<td>Codigo Premio </td>
         	<td>Descripcion de Premio </td>
@@ -43,9 +42,23 @@ $resultado=mysql_query($sql ,$conexion);
         
         </tr>
 
+<?php
+ 	while($row = mysql_fetch_array($resultado2) ) { 
+      echo "<tr><td>" . $row[0] . "</td>" ;
+	  echo "<td>" . $row[1] . "</td>";
+	  echo "<td>" . $row[2] . "</td>";
+	  echo "<td>" . $row[3] . "</td>";
+	  echo "<td>" . $row[4] . "</td></tr>";
+	  
+	}
+		
+   	mysql_free_result($resultado2); 
+   	mysql_close($conexion); 
+
+?>
        
         </table>
         </center>>
     <a href="index.html" class="volver">Inicio <a/>
     </body>
-    </html>
+</html>

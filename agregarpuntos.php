@@ -57,10 +57,10 @@ if(isset($_SESSION['AdminName'])) {?>
   				</div>
           <center>
       			<h2>Asignar Puntos</h2>
+				
       				<form action="validapuntos.php" method="POST">
-
                 
-						Usuario:<input type="text" name="rut" placeholder="Rut"><br>
+						Usuario:         <input type="text" name="Rut" placeholder="Rut"><br>
                 
 						Ingresar puntos: <input type="number" name="Puntos" placeholder="puntos"><br>
                 <br>

@@ -2,9 +2,8 @@
 session_start();
 include 'conex.php';
 
-if(isset($_SESSION['AdminName'])) {
+if(isset($_SESSION['AdminName'])) 
  ?>
-
  <html>
  <head>
  <head>
@@ -15,10 +14,10 @@ if(isset($_SESSION['AdminName'])) {
 	<body>
 			<?php
 				include 'conex.php';
-				$rut = $_POST['rut'];
+				$rut = $_POST['Rut'];
 				$puntos = $_POST['Puntos'];
 			
-				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = (`Puntos` + '".$puntos."') where Rut = '".$rut."'");
+				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = `Puntos` + '".$puntos."' WHERE Rut = '".$rut."'");
 				echo "Puntos agregados con éxito";
 			
 				/*if (mysql_num_rows($log)>0) {
@@ -34,4 +33,4 @@ if(isset($_SESSION['AdminName'])) {
  			}*/
 			?>
 	</body> 
- </html>
+</html>
