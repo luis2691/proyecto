@@ -19,7 +19,9 @@ if(isset($_SESSION['AdminName']))
 			
 				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = `Puntos` + '".$puntos."' WHERE Rut = '".$rut."'");
 				echo "Puntos agregados con éxito";
-			
+				echo'<script> window.location="agregarpuntos.php"; </script>';
+				
+				
 				/*if (mysql_num_rows($log)>0) {
 				$row = mysql_fetch_array($log);
 				$_SESSION["AdminName"] = $row['AdminName'];
