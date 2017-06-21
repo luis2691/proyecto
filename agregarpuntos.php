@@ -62,11 +62,7 @@ if(isset($_SESSION['AdminName'])) {?>
                 
 						Usuario:<input type="text" name="rut" placeholder="Rut"><br>
                 
-=======
-                Usuario:<input type="text" name="rut" placeholder="Rut"><br>
-               
-
-      					Ingresar puntos: <input type="number" name="Puntos" placeholder="puntos"><br>
+						Ingresar puntos: <input type="number" name="Puntos" placeholder="puntos"><br>
                 <br>
       			<!--		Contraseña: <input type="password" name="Password" placeholder="Ingresa tu contraseña"><br>-->
       					<input type="submit" name="guardar" value="Aceptar">
