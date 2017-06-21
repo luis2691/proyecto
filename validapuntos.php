@@ -15,8 +15,14 @@ if(isset($_SESSION['AdminName']))
 			<?php
 				include 'conex.php';
 				$rut = $_POST['Rut'];
-				$puntos = $_POST['Puntos'];
-			
+				$plastico = $_POST['plastico'];
+				$papel = $_POST['papel'];
+				$aluminio = $_POST['aluminio'];
+				$puntos = $_POST['Puntos'];				
+				
+				$addplastico = mysql_query("UPDATE usuario SET `Plastico` = `Plastico` + '".$puntos."' WHERE Rut = '".$rut."'");
+				$addpapel = mysql_query("UPDATE usuario SET `Papel` = `Plastico` + '".$plastico."' WHERE Rut = '".$rut."'");
+				$addaluminio = mysql_query("UPDATE usuario SET `Aluminio` = `Plastico` + '".$papel."' WHERE Rut = '".$rut."'");
 				$addpuntos = mysql_query("UPDATE usuario SET `Puntos` = `Puntos` + '".$puntos."' WHERE Rut = '".$rut."'");
 				echo "Puntos agregados con éxito";
 				echo'<script> window.location="agregarpuntos.php"; </script>';
