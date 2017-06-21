@@ -10,8 +10,8 @@ if(isset($_SESSION['AdminName']))
 include 'conex.php';
 
 $codigo =  $_POST['Codigo'];
-
-$sql = "select * from auspiciador where Codigo = '" . $codigo . "' ";
+$codigo2 =  $_POST['CodigoPremio'];
+$sql = "SELECT * FROM auspiciador WHERE CodigoPremio = '" . $codigo2 . "' AND  Codigo = '" . $codigo . "'  ";
 $resultado=mysql_query( $sql);
 ?>
 
@@ -29,22 +29,26 @@ $resultado=mysql_query( $sql);
 
 
 <body>
-<h1 class="titulo"> 	Nuevo Auspciador </h1>
+<h1 class="titulo"> 	Nuevo Auspciador  </h1>
 
 <?php
 	include 'conex.php';
+	
 	$numResults = mysql_num_rows($resultado);
+	
      if ($numResults != 0){
 		 echo "El auspiciador que intenta ingresar ya se encuentra en la Base de Datos";
 		 		 
 		 }else if( $numResults == 0){
 	
-	$addpremio = mysql_query("INSERT INTO auspiciador (`Codigo`,`Descripcion`, `Direccion`, `CodigoPremio`) VALUES ( '" .$_POST['Codigo']. "','" .$_POST['Descrip']. "','" .$_POST['Direc']. "','" .$_POST['CodigoPremio']. "')");
+	$addauspiciador = mysql_query("INSERT INTO auspiciador (`Codigo`,`Descripcion`, `Direccion`, `CodigoPremio`) VALUES ( '" .$_POST['Codigo']. "','" .$_POST['DescripA']. "','" .$_POST['Direc']. "','" .$_POST['CodigoPremio']. "')");
+
+	$addpremio = mysql_query("INSERT INTO premio (`CodigoPremio`,`Descripcion`, `Stock`,`Puntos`) VALUES ( '" .$_POST['CodigoPremio']. "','" .$_POST['DescripP']. "','" .$_POST['Stock']. "','" .$_POST['Puntos']. "')");
+	echo "AGREGADO CON EXITO";                                                     
 	
-	echo "Auspiciador agregado con éxito";                                                     
-	echo '<script> window.location="agregarauspiciador.php"; </script>';
+	/*echo '<script> window.location="agregarauspiciador.php"; </script>';*/
 	 }
-	 
+	
 	 
 	/*if (mysql_num_rows($log)>0) {
 	$row = mysql_fetch_array($log);
