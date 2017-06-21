@@ -2,7 +2,7 @@
 session_start();
 include 'conex.php';
 
-if(isset($_SESSION['AdminName'])) ?>
+if(isset($_SESSION['AdminName'])) {?>
 
 	<html>
 		<head>
@@ -131,7 +131,9 @@ if(isset($_SESSION['AdminName'])) ?>
 
 	</body>
 </html>
+
 <?php
+  
   }else{
   echo '<script> window.location="ingresoadmin.php"; </script>';
   }
