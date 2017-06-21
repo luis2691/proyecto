@@ -29,30 +29,13 @@ if(isset($_SESSION['Correo'])) {
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Inicio</a></li>
-								<li>
-									<a href="#">Administrar</a>
-									<ul>
-										<li><a href="#">Auspiciadores</a></li>
-										<li><a href="#">Usuarios</a></li>
-										<li><a href="#">Productos</a></li>
-<!--										<li>
-											<a href="#">Submenu</a>
-											<ul>
-												<li><a href="#">Lorem dolor</a></li>
-												<li><a href="#">Phasellus magna</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam nisl</a></li>
-												<li><a href="#">Veroeros feugiat</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>		-->
-										</ul>
+						<!--		<li><a href="index.html">Inicio</a></li>-->
+
 <!--								</li>
 								<li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
-								<li><a>xxx</a></li>
+
 						<li><a href="logout.php">Cerrar Sesión</a></li>
 							</ul>
 						</nav>
@@ -148,17 +131,9 @@ if(isset($_SESSION['Correo'])) {
 				   </table>
 				</div><input type='submit' value='Canjear'> <br></form></center>
 
-			<!-- Gigantic Heading
-				<section class="wrapper style2">
-					<div class="container">
-						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
-							<p>With a much smaller subtitle hanging out just below it</p>
-						</header>
-					</div>
-				</section> -->
 
-			<!-- Posts -->
+
+			<!-- Posts
 				<section class="wrapper style1">
 					<div class="container">
 						<div class="row">
@@ -202,17 +177,9 @@ if(isset($_SESSION['Correo'])) {
 							</section>
 						</div>
 					</div>
-				</section>
+				</section>-->
 
-			<!-- CTA -->
-				<section id="cta" class="wrapper style3">
-					<div class="container">
-						<header>
-							<h2>Are you ready to continue your quest?</h2>
-							<a href="#" class="button">Insert Coin</a>
-						</header>
-					</div>
-				</section>
+
 
 			<!-- Footer -->
 				<div id="footer">
@@ -234,8 +201,6 @@ if(isset($_SESSION['Correo'])) {
 						<ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-
-							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 						</ul>
 
