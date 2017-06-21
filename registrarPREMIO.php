@@ -2,19 +2,19 @@
 session_start();
 include 'conex.php';
 
-if(isset($_SESSION['AdminName'])) {
+if(isset($_SESSION['AdminName'])) 
 ?>
 
 
-<?php
+<?/*php
 include 'conex.php';
 
 $codigo =  $_POST['CodigoPremios'];
 $descripcion = $_POST['Descripcion'];
-$puntos = $_POST['Puntos']
+$puntos = $_POST['Puntos'];
 
 $sql = "select * from premio where CodigoPremio = '" . $codigo . "' ";
-$resultado=mysql_query( $sql);
+$resultado=mysql_query( $sql);*/
 ?>
 
 <html>
@@ -31,27 +31,30 @@ $resultado=mysql_query( $sql);
 
 
 <body>
-<h1 class="titulo"> Usuario </h1>
+<h1 class="titulo"> Premios </h1>
 
 <?php
+	include 'conex.php';
+	$codigo =  $_POST['CodigoPremios'];
+	$descripcion = $_POST['Descripcion'];
+	$puntos = $_POST['Puntos'];
+	$addpremio = mysql_query("INSERT INTO premio SET (`CodigoPremio`,`Descripcion`, `Puntos` = '".$_POST['CodigoPremios']."','".$_POST['Descripcion']."','".$_POST['Puntos']."'");
+	echo "Premio agregado con éxito";
+	echo '<script> window.location="agregarpremio.php"; </script>';
 
-   $numResults = mysql_num_rows($resultado);
-     if ($numResults != 0) {
-   		echo " El Usuario que desea ingresar ya existe ";
-		mysql_close($conexion);
-     } else if( $numResults == 0)		 {
-		$contra=$_POST['pass'];
-		$contra2=$_POST['pass2'];
-     if($contra==$contra2){
-	  $agregar = mysql_query("insert into usuario (`Nombre`, `Rut`, `Sexo`, `Correo`, `Password`) values ('" .$_POST['nom']. "','" .$_POST['ru']."','" .$_POST['sex']."','" .$_POST['corr']."','" .$_POST['pass']. "')", $conexion);
+	/*if (mysql_num_rows($log)>0) {
+	$row = mysql_fetch_array($log);
+	$_SESSION["AdminName"] = $row['AdminName'];
+			echo 'Iniciando sesión para '.$_SESSION['AdminName'].' <p>';
+			echo '<script> window.location="inicioadmin.php"; </script>';
+		}
+		else{
+			echo '<script> alert("Usuario o contraseña incorrectos.");</script>';
+			echo '<script> window.location="ingresoadmin.php"; </script>';
 
-	 echo "Usuario agregado con éxito";}
-	 else{
-		echo"Contraseña NO coinciden";
-	 }
-	 }
+}*/
 ?>
 
-		<a href="index.html" class="volver">Inicio <a/>
+	<!--	<a href="index.html" class="volver">Inicio <a/>-->
 </body>
 </html>
