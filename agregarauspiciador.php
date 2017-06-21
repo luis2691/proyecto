@@ -63,25 +63,23 @@ if(isset($_SESSION['AdminName'])) ?>
 				<form action="registrarAUSPICIADOR.php" method="post" >
 
 					Código de Auspiciador: <input type="text" name="Codigo" placeholder="#####" maxlength="25" size="25" required><br>
-					
+
 					Descripcion: <input type="text" name="DescripA" placeholder="Describa aqui el auspiciador" maxlength="25" size="25" required><br>
-					
+
 					Direccion: <input type="text" name="Direc" placeholder="Direccion fisica" maxlength="25" size="25" required><br>
 
 					Codigo Premio: <input type="number" name="CodigoPremio" placeholder="0000" maxlength="10" size="25"required><br>
-									
+
 					Descripcion Premio: <input type="text" name="DescripP" placeholder="Describa aqui el premio" maxlength="25" size="25" required><br>
 
 					Stock:: <input type="number" name="Stock" placeholder="Ingresa Stock" maxlength="10" size="25"required><br>
-					
+
 					Puntos: <input type="number" name="Puntos" placeholder="0000" maxlength="10" size="25"required><br>
-										
+
 					<input type="submit" value="Agregar"> <br>
 
 
 				</form>
 			</center>
-
-
-
-
+</html>
+		
