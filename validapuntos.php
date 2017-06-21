@@ -21,8 +21,8 @@ if(isset($_SESSION['AdminName'])) {
  			include 'conex.php';
       $nombre = $_POST['Nombre'];
  			$puntos = $_POST['Puntos'];
-
- 			$addpuntos = mysql_query("INSERT INTO usuario ('puntos') VALUES ('" .$_POST['Puntos']. "') where Nombre = '".$nombre."'");
+			
+			$addpuntos = mysql_query("UPDATE usuario `Puntos`= `Puntos` + $puntos where Nombre = '".$nombre."'");
  			/*if (mysql_num_rows($log)>0) {
  			$row = mysql_fetch_array($log);
  			$_SESSION["AdminName"] = $row['AdminName'];
