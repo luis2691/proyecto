@@ -71,7 +71,7 @@ if(isset($_SESSION['Correo'])) {
 				</section> -->
 
 			<!-- Highlights -->
-				<section class="wrapper style1">
+	<!--			<section class="wrapper style1">
 					<div class="container">
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
@@ -97,16 +97,18 @@ if(isset($_SESSION['Correo'])) {
 							</section>
 						</div>
 					</div>
-				</section>
+				</section>-->
 
 				<?php
 				include 'conex.php';
 				$correo=$_SESSION['Correo'];
-				$usuario =mysql_query("SELECT * FROM usuario ");
+				$usuario =mysql_query("SELECT puntos FROM usuario where Correo='$correo'");
+				if ($usuario) {
+					$data=mysql_fetch_assoc($usuario);
+					echo '<br>	Tus puntos acumulados son:  '  .$data['puntos']. '<p>';
 
-					echo 'Tus puntos acumulados son: '.$usuario.'<p>';
-					echo "$correo";
-					echo "$usuario";
+					}
+
 
 
 				?>
