@@ -6,15 +6,13 @@ if(isset($_SESSION['AdminName']))
 ?>
 
 
-<?/*php
+<?php
 include 'conex.php';
 
 $codigo =  $_POST['CodigoPremios'];
-$descripcion = $_POST['Descripcion'];
-$puntos = $_POST['Puntos'];
 
 $sql = "select * from premio where CodigoPremio = '" . $codigo . "' ";
-$resultado=mysql_query( $sql);*/
+$resultado=mysql_query( $sql);
 ?>
 
 <html>
@@ -35,13 +33,19 @@ $resultado=mysql_query( $sql);*/
 
 <?php
 	include 'conex.php';
-	$codigo =  $_POST['CodigoPremios'];
-	$descripcion = $_POST['Descripcion'];
-	$puntos = $_POST['Puntos'];
-	$addpremio = mysql_query("INSERT INTO premio SET (`CodigoPremio`,`Descripcion`, `Puntos` = '".$_POST['CodigoPremios']."','".$_POST['Descripcion']."','".$_POST['Puntos']."'");
-	echo "Premio agregado con éxito";
+	$numResults = mysql_num_rows($resultado);
+     if ($numResults != 0){
+		 echo "El premio que intenta ingresar ya se encuentra en la Base de Datos";
+		 		 
+		 }else if( $numResults == 0){
+	
+	$addpremio = mysql_query("INSERT INTO premio (`CodigoPremio`,`Descripcion`, `Puntos`) VALUES ( '" .$_POST['CodigoPremios']. "','" .$_POST['Descrip']. "','" .$_POST['Puntos']. "')");
+	
+	echo "Premio agregado con éxito";                                                     
 	echo '<script> window.location="agregarpremio.php"; </script>';
-
+	 }
+	 
+	 
 	/*if (mysql_num_rows($log)>0) {
 	$row = mysql_fetch_array($log);
 	$_SESSION["AdminName"] = $row['AdminName'];

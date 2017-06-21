@@ -63,10 +63,12 @@ if(isset($_SESSION['AdminName'])) {?>
 				<form action="registrarPREMIO.php" method="post" >
 
 					Código de Premio: <input type="text" name="CodigoPremios" placeholder="#####" maxlength="25" size="25" required><br>
+					
+					Descripcion: <input type="text" name="Descrip" placeholder="Describa aqui el premio" maxlength="25" size="25" required><br>
 
-					Puntos: <input type="text" name="Puntos" placeholder="0000" maxlength="10" size="10"required><br>
+					Puntos: <input type="number" name="Puntos" placeholder="0000" maxlength="10" size="10"required><br>
 
-					<textarea name="Descripcion" rows="10" cols="30" maxlength="240" required></textarea><br>
+										
 					<input type="submit" value="Agregar"> <br>
 
 
