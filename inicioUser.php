@@ -96,7 +96,7 @@ if(isset($_SESSION['Correo'])) {
 
 				?></h2>
 				<center>
-				<form action='canjear.php' method='post'>
+				<form action="canjear.php" method="post">
 				<div class="datagrid"><table align="center" border="20px" cellpadding="2" cellspacing="2">
 				<thead><th width='10' colspan="1" rowspan="1" align="center">Selección</th><th width='50%' colspan="1" rowspan="1" align="center">Descripción</th><th width='10' colspan="1" rowspan="1" align="center">Puntos</th></thead>
 				<center>
@@ -109,12 +109,12 @@ if(isset($_SESSION['Correo'])) {
 				echo "
 
 				    <tr>
-							<td width='25' align='center'><input type=radio name=codigo value =".$registro['CodigoPremio']." required/></td>
+							<td width='25' align='center'>".$registro['CodigoPremio']."</td>
 							<td  width='150' align='center'>".$registro['Descripcion']."</td>
 				      <td width='25' align='center'>".$registro['Puntos']."</td>
 
 						</tr>
-				
+
 				";
 				}
 
@@ -126,11 +126,13 @@ if(isset($_SESSION['Correo'])) {
 				echo"
 				<thead><th width='150' colspan='7' rowspan='7' align='center'>El Total de Premios es de: $numero</th></thead>
 				";
-				
+
 				?>
 				</tbody>
 				   </table>
-				</div><input type='submit' value='Canjear'> <br></form></center>
+					 </div>
+					 <input type="text" name="cod" placeholder="Escriba Código"><br>
+					 <input type='submit' value='Canjear'> <br></form></center>
 
 
 
