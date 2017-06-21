@@ -26,7 +26,7 @@ if(isset($_SESSION['AdminName'])) {?>
   					<!-- Nav -->
   						<nav id="nav">
   							<ul>
-  								<li><a href="index.html">Inicio</a></li>
+  								<li><a href="inicioadmin.php">Inicio</a></li>
   								<li>
   									<a href="#">Administrar</a>
   									<ul>
@@ -60,10 +60,10 @@ if(isset($_SESSION['AdminName'])) {?>
       				<form action="validapuntos.php" method="POST">
                 Usuario:
                 <select>
-                <option value="0">Seleccionar usuario</option>
+                <option value="0" name="Nombre">Seleccionar usuario</option>
                 <?php
                 include 'conex.php';
-                $query= "SELECT Nombre FROM usuario";
+                $query= "SELECT * FROM usuario";
                 $resultado=mysql_query($query);
                 while ($usuario = mysql_fetch_array($resultado)) {
                   echo '<option value="'.$usuario[Nombre].'">'.$usuario[Nombre].'</option>';

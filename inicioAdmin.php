@@ -28,13 +28,13 @@ if(isset($_SESSION['AdminName'])) {?>
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="index.html">Inicio</a></li>
+					<!--			<li><a href="index.html">Inicio</a></li>-->
 								<li>
 									<a href="#">Administrar</a>
 									<ul>
 										<li><a href="#">Auspiciadores</a></li>
-										<li><a href="#">Usuarios</a></li>
-										<li><a href="#">Productos</a></li>
+										<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
+										<li><a href="agregarpremio.php">Premios</a></li>
 <!--										<li>
 											<a href="#">Submenu</a>
 											<ul>
@@ -51,7 +51,7 @@ if(isset($_SESSION['AdminName'])) {?>
 								<li><a href="left-sidebar.html">Left Sidebar</a></li>
 								<li><a href="right-sidebar.html">Right Sidebar</a></li>
 								<li><a href="two-sidebar.html">Two Sidebar</a></li>-->
-								<li><a href="registraradmin.html">Agregar Admin</a></li>
+
 						<li><a href="logout.php">Cerrar Sesión</a></li>
 							</ul>
 						</nav>
@@ -79,8 +79,8 @@ if(isset($_SESSION['AdminName'])) {?>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-								<a href="#">	<i class="icon major fa-wrench"></i></a>
-									<h3><a href="#">Productos</a></h3>
+								<a href="agregarpremio.php">	<i class="icon major fa-wrench"></i></a>
+									<h3><a href="agregarpremio.php">Productos</a></h3>
 									<p>Aquí puedes agregar los productos de cada auspiciador</p>
 								</div>
 							</section>
