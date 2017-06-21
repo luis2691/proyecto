@@ -1952,6 +1952,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="number"],
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -1972,16 +1973,18 @@
 		width: 100%;
 	}
 
-		input[type="text"]:focus,
+		input[="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="number"]:focus,
 		textarea:focus {
 			border-color: #37c0fb;
 		}
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"] {
+	input[type="email"]
+	input[type="number"],{
 		line-height: 1em;
 	}
 
