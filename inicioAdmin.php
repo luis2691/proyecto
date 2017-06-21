@@ -32,7 +32,7 @@ if(isset($_SESSION['AdminName'])) {?>
 								<li>
 									<a href="#">Administrar</a>
 									<ul>
-										<li><a href="#">Auspiciadores</a></li>
+										<li><a href="agregarauspiciador.php">Auspiciadores</a></li>
 										<li><a href="agregarpuntos.php">Puntos Usuarios</a></li>
 										<li><a href="agregarpremio.php">Premios</a></li>
 <!--										<li>

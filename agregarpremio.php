@@ -2,7 +2,7 @@
 session_start();
 include 'conex.php';
 
-if(isset($_SESSION['AdminName'])) {?>
+if(isset($_SESSION['AdminName'])) ?>
 
 	<html>
 		<head>
@@ -58,7 +58,7 @@ if(isset($_SESSION['AdminName'])) {?>
 
 <!-- aqui registro e ingreso de usuario -->
 		<center>
-				<h2>Agregar Permio</h2>
+				<h2>Agregar Premio</h2>
 
 				<form action="registrarPREMIO.php" method="post" >
 
